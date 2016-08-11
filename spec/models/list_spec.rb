@@ -15,7 +15,7 @@ RSpec.describe List, type: :model do
   end
 
   describe '#snooze_all_tasks!' do
-    it 'should snooze all tasks' do
+    it 'should delay the deadline of all tasks by an hour' do
       list = List.create()
       time = 1.hour.from_now
       task1 = Task.create(deadline: time, list_id: list.id)
